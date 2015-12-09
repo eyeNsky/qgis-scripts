@@ -5,4 +5,8 @@ Load a vector that has a field 'url', select some features and launch the script
 # image-curl-list
 Load a vector that has a field 'url', select some features and launch the script. The script will add the selected images and the associated vrt file to a 'curl.list' file. Use with "curl -K curl.list".
 # image-wget-list
-Load a vector that has a field 'url', select some features and launch the script. The script will add the selected images and the associated vrt file to a 'wget.list' file. Use with "wget -i wget.list". You can also check if the image exists with "wget --spider -i wget.list".
+Load a vector that has a field 'url', select some features and launch the script. The script will add the selected images and the associated vrt file to a 'wget.list' file. Use with "wget -i wget.list". You can also check if the images exist with:
+<pre><code>
+wget --outputfile=spider.txt --spider -i wget.list
+grep broken wget.list
+</pre></code>
