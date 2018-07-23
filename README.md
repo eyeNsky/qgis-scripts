@@ -9,5 +9,6 @@ Load a vector that has a field 'url', select some features and launch the script
 <pre><code>wget --outputfile=spider.txt --spider -i wget.list
 grep broken spider.txt</pre></code>
 # select-key-frames
-Load vector of image footprints that have high overlap (say ones that were collected for SfM). The code will select key frames based on an overlap threshold. Images that overlap the existing set of footprints by more than the threshold will be skipped.
-# 
+Load vector of image footprints that have high overlap (say ones that were collected for SfM). The code will select key frames to mosaic based on an overlap threshold. Images that overlap the existing set of footprints by more than the threshold will be skipped. Frames that are not skipped are appended to the existing set.
+# export-selected-frame-ids
+After selecting key frames, run this to export the image names (+.jpg) to 'image.list' in the directory of your choosing. Defaults to $HOME
