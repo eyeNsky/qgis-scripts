@@ -8,3 +8,6 @@ Load a vector that has a field 'url', select some features and launch the script
 Load a vector that has a field 'url', select some features and launch the script. The script will add the selected images and the associated vrt file to a 'wget.list' file. Use with "wget -i wget.list". You can also check if the images exist with:
 <pre><code>wget --outputfile=spider.txt --spider -i wget.list
 grep broken spider.txt</pre></code>
+# select-key-frames
+Load vector of image footprints that have high overlap (say ones that were collected for SfM). The code will select key frames based on an overlap threshold. Images that overlap the existing set of footprints by more than the threshold will be skipped.
+# 
